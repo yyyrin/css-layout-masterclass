@@ -52,6 +52,19 @@
 
 ### 1.4. Align Content
 
-- 교차 축(Cross Axis)에 여분의 공간이 있을 때 flex container의 여러 줄을 정렬함
-- `flex-wrap: wrap;`으로 여러 줄이 생겼을 때 사용
-- `row-gap`과 `column-gap` 사용하면 유용
+- **`align-content`**
+  - 여러 줄로 나뉜 Flexbox 컨테이너에서 각 줄의 간격을 설정함
+  - 주로 `flex-wrap: wrap;`과 함께 사용됨
+  - Cross Axis에 여분의 공간이 있을 때 flex container의 여러 줄을 정렬함
+  - `row-gap`과 `column-gap` 사용하면 유용
+
+<br/><br/>
+
+### 1.5. Order
+
+- **`order`**
+  - 자식들에게 `order`를 설정해 줌으로써 자식들의 순서를 바꿀 수 있음
+  - `order: 0;` <- defalut value
+  - 정렬 순서는 오름차순
+- **`align-self`**
+  - 자식들이 스스로의 Cross Axis 정렬 설정할 수 있음
