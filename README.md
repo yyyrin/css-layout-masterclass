@@ -31,3 +31,19 @@
 - `flex-direction`이 `column`으로 설정된 경우, **Main Axis**는 위에서 아래로 수직으로 향하고, **Cross Axis**는 왼쪽에서 오른쪽으로 수평으로 향함
 - `justify-content`는 flex container의 Main Axis를 따라 아이템을 정렬함
 - `align-items`는 flex container의 Cross Axis를 따라 아이템을 정렬함
+
+<br/><br/>
+
+### 1.3. Flex Flow
+
+- **`flex-wrap`**
+  - `flex-item` 요소들이 강제로 한 줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러 행으로 나누어 표현할 것인지 결정하는 속성
+  - `flex-wrap: nowrap` : default value, 줄 바꿈 허용X
+  - `flex-wrap: wrap` : 줄 바꿈 허용
+  - `flex-wrap: wrap-reverse` : 줄 바꿈 + 역순
+
+<br/>
+
+- **`flex-flow`**
+  - `flex-direction`, `flex-wrap` 속성의 단축 속성
+  - e.g. `flex-flow: row nowrap;` <- default value

@@ -1,10 +1,11 @@
 body {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   gap: 10px;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start;
+  /* flex-flow: row wrap; */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .box {
