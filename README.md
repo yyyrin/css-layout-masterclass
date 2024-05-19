@@ -47,3 +47,11 @@
 - **`flex-flow`**
   - `flex-direction`, `flex-wrap` 속성의 단축 속성
   - e.g. `flex-flow: row nowrap;` <- default value
+
+<br/><br/>
+
+### 1.4. Align Content
+
+- 교차 축(Cross Axis)에 여분의 공간이 있을 때 flex container의 여러 줄을 정렬함
+- `flex-wrap: wrap;`으로 여러 줄이 생겼을 때 사용
+- `row-gap`과 `column-gap` 사용하면 유용
