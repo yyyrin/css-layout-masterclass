@@ -1,21 +1,10 @@
+body {
+  display: flex;
+  justify-content: space-between;
+}
+
 .box {
   width: 200px;
   height: 200px;
   background-color: tomato;
-  display: inline-block;
-  text-align: right;
-}
-
-.box:first-child {
-  /* margin-right: 305.15px; */
-  float: left;
-}
-
-.box:last-child {
-  /* margin-left: 305.15px; */
-  float: right;
-}
-
-.box:nth-child(2) {
-  margin: 0 20%;
 }
