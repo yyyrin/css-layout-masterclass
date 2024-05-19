@@ -1,7 +1,9 @@
 body {
   display: flex;
-  flex-direction: column-reverse;
+  height: 100vh;
   gap: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .box {
@@ -10,4 +12,7 @@ body {
   background-color: tomato;
   color: white;
   font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
