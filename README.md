@@ -74,6 +74,17 @@
 ### 1.6. Flex Grow
 
 - **`flex-grow`**
-  - flex-item 요소가 flex-container 요소 내부에서 할당 가능한 공간의 정도를 선언함
-  - 만약 형제 요소로 렌더링된 모든 flex-item 요소들이 동일한 flex-grow 값을 갖는다면, flex-container 내부에서 동일한 공간을 할당받음
-  - flex-grow 값으로 다른 소수값을 지정한다면, 그에 따라 다른 공간값을 나누어 할당받게 됨
+  - `flex-item` 요소가 `flex-container` 요소 내부에서 할당 가능한 공간의 정도를 선언함
+  - 만약 형제 요소로 렌더링된 모든 `flex-item` 요소들이 동일한 `flex-grow` 값을 갖는다면, `flex-container` 내부에서 동일한 공간을 할당받음
+  - `flex-grow` 값으로 다른 소수값을 지정한다면, 그에 따라 다른 공간값을 나누어 할당받게 됨
+
+<br/><br/>
+
+### 1.7. Flex Shrink
+
+- **`flex-shrink`**
+  - `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 `flex-shrink` 속성을 사용
+  - 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 축소됨
+  - `flex-shrink: 0;` : 크기 고정 (축소 X)
+  - `flex-shrink: 1;` : default value
+  - 숫자 커질수록 더 많이 축소됨
