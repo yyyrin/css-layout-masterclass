@@ -1,7 +1,21 @@
-body {
+.box {
+  width: 200px;
+  height: 200px;
   background-color: tomato;
+  display: inline-block;
+  text-align: right;
 }
 
-h1 {
-  color: white;
+.box:first-child {
+  /* margin-right: 305.15px; */
+  float: left;
+}
+
+.box:last-child {
+  /* margin-left: 305.15px; */
+  float: right;
+}
+
+.box:nth-child(2) {
+  margin: 0 20%;
 }
