@@ -1,7 +1,14 @@
+html,
 body {
+  margin: 0;
+  padding: 0;
+}
+
+.father {
   display: flex;
   height: 100vh;
   justify-content: center;
+  flex-direction: column;
 }
 
 .box {
@@ -15,20 +22,14 @@ body {
 
 .box:first-child {
   background-color: tomato;
-  flex-grow: 1;
-  /* flex-grow: 0; <- defalut value */
-  /* flex-shrink: 0; <- defalut value */
+  /* flex-grow: 0;
   flex-shrink: 5;
-}
-
-.box:nth-child(2) {
-  background-color: orange;
-  flex-grow: 2;
-  flex-shrink: 0;
+  flex-basis: 500px; */
+  /* min-width와 같은 효과낼 수 있음 */
+  flex: 1 0 500px;
 }
 
 .box:last-child {
   background-color: teal;
   flex-grow: 1;
-  flex-shrink: 1;
 }

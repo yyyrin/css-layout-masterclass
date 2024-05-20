@@ -85,6 +85,23 @@
 - **`flex-shrink`**
   - `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 `flex-shrink` 속성을 사용
   - 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 축소됨
-  - `flex-shrink: 0;` : 크기 고정 (축소 X)
+  - `flex-shrink: 0;` : 컨텐츠 크기만큼 표기 (축소 X)
   - `flex-shrink: 1;` : default value
   - 숫자 커질수록 더 많이 축소됨
+
+<br/><br/>
+
+### 1.8. Flex Basis
+
+- **`flex-basis`**
+  - `flex-grow`로 커지기 시작하는 지점이자, `flex-shrink`로 줄어들기 시작하는 지점
+  - 커지거나 줄어들기 전의 초기 **길이**
+    - 초기 너비가 아닌 **길이**인 이유는 Main Axis를 따라가기 때문에 `flex-direction`이 `column`인 경우 `height`가 되기 때문
+    - 즉, `width`와 다른 점은 Main Axis를 기준으로 한다는 점
+  - e.g. `flex-grow: 2;` `flex-shrink: 0;`와 함께 사용 시, `flex-basis`는 `min-width`와 같은 효과 낼 수 있음
+  - e.g. `flex-grow: 0;` `flex-shrink: 5;`와 함께 사용 시, `flex-basis`는 `max-width`와 같은 효과 낼 수 있음
+
+<br/>
+
+- **`flex: flex-grow flex-shrink flex-basis;`**
+  - `flex-grow`와 `flex-shrink`, `flex-basis`를 한 번에 작성 가능
