@@ -181,3 +181,37 @@
   grid-row: 1 / 2;
 }
 ```
+
+<br/><br/>
+
+### 2.3. Line Names
+
+- line의 이름을 적용시킬 때 반드시 +1개 만들기
+  - `grid-template-rows`가 3개인 경우, 4개로 지정한 rows를 감싸는 형식
+
+```css
+.father {
+  display: grid;
+  grid-template-columns: [cucumber] 100px [potato] 200px [banana] 50px [brocoli];
+  grid-template-rows: [korea] 200px [thailand] 100px [greece];
+}
+
+.child:last-child {
+  grid-column: potato / brocoli;
+}
+
+.child:first-child {
+  grid-row: korea / greece;
+}
+```
+
+```css
+/* 위와 동일한 결과 */
+.child:last-child {
+  grid-column: 2 / -1;
+}
+
+.child:first-child {
+  grid-row: 1 / -1;
+}
+```
