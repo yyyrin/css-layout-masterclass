@@ -147,3 +147,37 @@
   - `1fr 1fr 1fr`: 균일하게 1:1:1 비율인 3개의 column 만듦
 - 고정 크기와 가변 크기 섞어서 사용 가능
   - `grid-template-columns: 100px 2fr 1fr;`
+
+<br/><br/>
+
+### 2.2. Grid Lines
+
+- **`grid-column-start`**
+- **`grid-column-end`**
+- **`grid-column`**
+- **`grid-row-start`**
+- **`grid-row-end`**
+- **`grid-row`**
+
+<br/>
+
+- Grid **아이템**에 적용하는 속성으로, 각 셀의 영역을 지정함
+- `grid-column-start`가 시작 번호, `grid-column-end`가 끝 번호
+- `grid-column`: start와 end 속성을 한번에 쓰는 축약형
+
+```css
+.item:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+```
+
+```css
+/* 위와 동일한 결과 */
+.item:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+```
