@@ -107,3 +107,43 @@
 
 - **`flex: flex-grow flex-shrink flex-basis;`**
   - `flex-grow`와 `flex-shrink`, `flex-basis`를 한 번에 작성 가능
+
+<br/><br/>
+
+## 2. Grid
+
+### 2.1. Columns and Rows
+
+- **`grid-template-columns`**
+- **`grid-template-rows`**
+
+<br/>
+
+- `container`에서 Gird 트랙의 크기들을 지정해주는 속성
+- 여러가지 단위를 사용할 수 있고 섞어서 사용 가능
+
+  ```css
+  .container {
+    grid-template-columns: 200px 200px 500px;
+    /* grid-template-columns: 1fr 1fr 1fr */
+    /* grid-template-columns: repeat(3, 1fr) */
+    /* grid-template-columns: 200px 1fr */
+    /* grid-template-columns: 100px 200px auto */
+
+    grid-template-rows: 200px 200px 500px;
+    /* grid-template-rows: 1fr 1fr 1fr */
+    /* grid-template-rows: repeat(3, 1fr) */
+    /* grid-template-rows: 200px 1fr */
+    /* grid-template-rows: 100px 200px auto */
+  }
+  ```
+
+<br/>
+
+- `grid-template-columns: 200px 200px 500px;`
+  - column을 `200px`, `200px`, `500px`로 만듦
+- `grid-template-columns: 1fr 1fr 1fr;`
+  - `fr`: fraction(여기로)을 의미하며, 숫자 비율대로 트랙의 크기 나눔
+  - `1fr 1fr 1fr`: 균일하게 1:1:1 비율인 3개의 column 만듦
+- 고정 크기와 가변 크기 섞어서 사용 가능
+  - `grid-template-columns: 100px 2fr 1fr;`
