@@ -215,3 +215,64 @@
   grid-row: 1 / -1;
 }
 ```
+
+<br/><br/>
+
+### 2.4. Grid Template
+
+- `grid-template-areas`
+- `grid-template`
+- `grid-area`
+
+<br/>
+
+- 각 영역(Grid Area)에 이름을 붙이고, 그 이름을 이용해 배치하는 방법
+
+  ```css
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      "a a a a"
+      "b b b c"
+      "d d d d";
+  }
+  ```
+
+  - 각자 차지하는 셀의 개수만큼 해당 위치에 이름 작성
+  - 각 셀마다 공백을 하나씩 넣어서 구분
+  - `a`는 첫 번째 row에서 4개의 column을 차지하니 맨 위에 4번 작성
+  - 빈 칸은 마침표 또는 `"none"` 사용
+
+  ```css
+  /* 위와 동일한 결과 */
+  .container {
+    grid-template:
+      "a a a a" 1fr
+      "b b b c" 2fr
+      "d d d d" 1fr / 1fr 1fr 1fr 1fr;
+  }
+  ```
+
+<br/>
+
+- **해당 아이템** 요소에 **`grid-area`** 속성으로 이름 지정하면 각 영역의 이름 매칭
+
+  ```css
+  /* 이름 값에 따옴표 없음 주의 */
+  header {
+    grid-area: a;
+  }
+
+  section {
+    grid-area: b;
+  }
+
+  aside {
+    grid-area: c;
+  }
+
+  footer {
+    grid-area: d;
+  }
+  ```
