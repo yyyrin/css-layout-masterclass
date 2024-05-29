@@ -276,3 +276,21 @@
     grid-area: d;
   }
   ```
+
+<br/><br/>
+
+### 2.5. The Span Keyword
+
+- `span`
+
+<br/>
+
+- **몇 개의 셀을 차지하게 할 건지** 지정
+  ```css
+  .item:nth-child(1) {
+    /* 1번 라인에서 시작해서 2칸 차지 */
+    grid-column: 1 / span 2;
+    /* 1번 라인에서 시작해서 3칸 차지 */
+    grid-row: 1 / span 3;
+  }
+  ```
