@@ -498,3 +498,46 @@
 
 - `items` -> item을 어떻게 배치할 것인가에 대한 속성
 - `content` -> item의 줄 간격을 어떻게 배치할 것인가에 대한 속성
+
+<br/><br/>
+
+### 2.9. Auto Sizing and Minmax
+
+#### `min-content`
+
+- Grid 아이템이 포함하는 내용(Contents)의 최소 크기
+- 아이템이 텍스트인 경우, 가장 긴 단어가 기준이 됨
+
+  ```css
+  .container {
+    grid-template-columns: 1fr min-content 1fr;
+  }
+  ```
+
+<br/>
+
+#### `max-content`
+
+- Grid 아이템이 포함하는 내용(Contents)의 최대 크기
+- 아이템이 텍스트인 경우, 길이가 길더라도 줄바꿈 없이 한 줄로 보여줌
+
+  ```css
+  .container {
+    grid-template-columns: 1fr max-content 1fr;
+  }
+  ```
+
+<br/>
+
+#### `minmax()`
+
+- 최솟값과 최댓값을 지정할 수 있는 함수
+- **`minmax(100px, auto)`**: **최소한 100px, 최대는 자동으로(auto) 늘어나게**
+- 아무리 내용의 양이 적더라도 최소한 높이 100px은 확보하고, 내용이 많아 100px이 넘어가면 알아서 늘어나도록 처리해준 예시
+
+  ```css
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(100px, auto));
+  }
+  ```
