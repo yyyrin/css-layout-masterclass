@@ -347,3 +347,97 @@
 - `dense`: 빈 공간을 최소화하여 가능한 모든 아이템을 배치
 - `row dense`: 행 방향으로 빈 공간을 최소화하여 배치
 - `column dense`: 열 방향으로 빈 공간을 최소화하여 배치
+
+<br/><br/>
+
+### 2.7. Align and Justify items
+
+- `stretch`
+  - default value
+  - 아이템의 width나 height가 없다면 셀의 처음부터 끝까지 차지
+
+#### `justify-items`
+
+- 아이템들을 가로(row축) 방향으로 정렬
+
+  ```css
+  .container {
+    justify-items: stretch;
+    /* justify-items: start; */
+    /* justify-items: center; */
+    /* justify-items: end; */
+  }
+  ```
+
+<br/>
+
+#### `align-items`
+
+- 아이템들을 세로(column축) 방향으로 정렬
+
+  ```css
+  .container {
+    align-items: stretch;
+    /* align-items: start; */
+    /* align-items: center; */
+    /* align-items: end; */
+  }
+  ```
+
+<br/>
+
+#### `place-items`
+
+- `align-items`와 `justify-items`를 같이 쓸 수 있는 단축 속성
+- `align-items`, `justify-items`의 순서로 작성
+- 하나의 값만 쓰면 두 속성 모두에 적용됨
+
+  ```css
+  .container {
+    place-items: center start;
+  }
+  ```
+
+<br/>
+
+#### `align-self`
+
+- 해당 아이템을 세로(column축) 방향으로 정렬
+
+  ```css
+  .item {
+    align-self: stretch;
+    /* align-self: start; */
+    /* align-self: center; */
+    /* align-self: end; */
+  }
+  ```
+
+<br/>
+
+#### `justify-self`
+
+- 해당 아이템을 가로(row축) 방향으로 정렬
+
+  ```css
+  .item {
+    justify-self: stretch;
+    /* justify-self: start; */
+    /* justify-self: center; */
+    /* justify-self: end; */
+  }
+  ```
+
+<br/>
+
+#### `place-self`
+
+- `place-self`와 `justify-self`를 같이 쓸 수 있는 단축 속성
+- `align-self`, `justify-self` 순서로 작성
+- 하나의 값만 쓰면 두 속성 모두에 적용됨
+
+  ```css
+  .item {
+    place-self: start center;
+  }
+  ```
