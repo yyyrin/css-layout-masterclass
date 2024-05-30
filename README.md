@@ -441,3 +441,60 @@
     place-self: start center;
   }
   ```
+
+<br/><br/>
+
+### 2.8. Align and Justify Content
+
+#### `align-content`
+
+- Grid 아이템들의 높이를 모두 합 한 값이 Grid 컨테이너의 높이보다 작을 때 Grid 아이템들을 통째로 정렬함
+
+  ```css
+  .container {
+    align-content: stretch;
+    /* align-content: start; */
+    /* align-content: center; */
+    /* align-content: end; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: space-evenly; */
+  }
+  ```
+
+<br/>
+
+#### `justify-content`
+
+- Grid 아이템들의 너비를 모두 합한 값이 Grid 컨테이너의 너비보다 작을 때 Grid 아이템들을 통째로 정렬
+
+  ```css
+  .container {
+    justify-content: stretch;
+    /* justify-content: start; */
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+  }
+  ```
+
+<br/>
+
+#### `place-content`
+
+- `align-content`와 `justify-content`를 같이 쓸 수 있는 단축 속성
+- `align-content`, `justify-content`의 순서로 작성
+- 하나의 값만 쓰면 두 속성 모두에 적용됨
+
+  ```css
+  .container {
+    place-content: space-between center;
+  }
+  ```
+
+<br/>
+
+- `items` -> item을 어떻게 배치할 것인가에 대한 속성
+- `content` -> item의 줄 간격을 어떻게 배치할 것인가에 대한 속성
