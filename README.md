@@ -36,77 +36,89 @@
 
 ### 1.3. Flex Flow
 
-- **`flex-wrap`**
-  - `flex-item` 요소들이 강제로 한 줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러 행으로 나누어 표현할 것인지 결정하는 속성
-  - `flex-wrap: nowrap` : default value, 줄 바꿈 허용X
-  - `flex-wrap: wrap` : 줄 바꿈 허용
-  - `flex-wrap: wrap-reverse` : 줄 바꿈 + 역순
+#### `flex-wrap`
+
+- `flex-item` 요소들이 강제로 한 줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러 행으로 나누어 표현할 것인지 결정하는 속성
+- `flex-wrap: nowrap` : default value, 줄 바꿈 허용X
+- `flex-wrap: wrap` : 줄 바꿈 허용
+- `flex-wrap: wrap-reverse` : 줄 바꿈 + 역순
 
 <br/>
 
-- **`flex-flow`**
-  - `flex-direction`, `flex-wrap` 속성의 단축 속성
-  - e.g. `flex-flow: row nowrap;` <- default value
+#### `flex-flow`
+
+- `flex-direction`, `flex-wrap` 속성의 단축 속성
+- e.g. `flex-flow: row nowrap;` <- default value
 
 <br/><br/>
 
 ### 1.4. Align Content
 
-- **`align-content`**
-  - 여러 줄로 나뉜 Flexbox 컨테이너에서 각 줄의 간격을 설정함
-  - 주로 `flex-wrap: wrap;`과 함께 사용됨
-  - Cross Axis에 여분의 공간이 있을 때 flex container의 여러 줄을 정렬함
-  - `row-gap`과 `column-gap` 사용하면 유용
+#### `align-content`
+
+- 여러 줄로 나뉜 Flexbox 컨테이너에서 각 줄의 간격을 설정함
+- 주로 `flex-wrap: wrap;`과 함께 사용됨
+- Cross Axis에 여분의 공간이 있을 때 flex container의 여러 줄을 정렬함
+- `row-gap`과 `column-gap` 사용하면 유용
 
 <br/><br/>
 
 ### 1.5. Order
 
-- **`order`**
-  - 자식들에게 `order`를 설정해 줌으로써 자식들의 순서를 바꿀 수 있음
-  - `order: 0;` <- defalut value
-  - 정렬 순서는 오름차순
-- **`align-self`**
-  - 자식들이 스스로의 Cross Axis 정렬 설정할 수 있음
+#### `order`
+
+- 자식들에게 `order`를 설정해 줌으로써 자식들의 순서를 바꿀 수 있음
+- `order: 0;` <- defalut value
+- 정렬 순서는 오름차순
+
+<br/>
+
+#### `align-self`
+
+- 자식들이 스스로의 Cross Axis 정렬 설정할 수 있음
 
 <br/><br/>
 
 ### 1.6. Flex Grow
 
-- **`flex-grow`**
-  - `flex-item` 요소가 `flex-container` 요소 내부에서 할당 가능한 공간의 정도를 선언함
-  - 만약 형제 요소로 렌더링된 모든 `flex-item` 요소들이 동일한 `flex-grow` 값을 갖는다면, `flex-container` 내부에서 동일한 공간을 할당받음
-  - `flex-grow` 값으로 다른 소수값을 지정한다면, 그에 따라 다른 공간값을 나누어 할당받게 됨
-  - `flex-grow: 0;`: `flex-item`이 여유 공간 차지X (default value)
-  - `flex-grow` 값을 1이상의 값으로 설정하면 해당 `flex-item`은 여유 공간을 더 많이 차지
+#### `flex-grow`
+
+- `flex-item` 요소가 `flex-container` 요소 내부에서 할당 가능한 공간의 정도를 선언함
+- 만약 형제 요소로 렌더링된 모든 `flex-item` 요소들이 동일한 `flex-grow` 값을 갖는다면, `flex-container` 내부에서 동일한 공간을 할당받음
+- `flex-grow` 값으로 다른 소수값을 지정한다면, 그에 따라 다른 공간값을 나누어 할당받게 됨
+- `flex-grow: 0;`: `flex-item`이 여유 공간 차지X (default value)
+- `flex-grow` 값을 1이상의 값으로 설정하면 해당 `flex-item`은 여유 공간을 더 많이 차지
 
 <br/><br/>
 
 ### 1.7. Flex Shrink
 
-- **`flex-shrink`**
-  - `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 `flex-shrink` 속성을 사용
-  - 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 축소됨
-  - `flex-shrink: 0;` : 축소X , 자신의 본래 크기 유지
-  - `flex-shrink: 1;` : 필요에 따라 축소될 수 있음 (default value)
-  - 숫자 커질수록 더 많이 축소됨
+#### `flex-shrink`
+
+- `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 `flex-shrink` 속성을 사용
+- 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 축소됨
+- `flex-shrink: 0;` : 축소X , 자신의 본래 크기 유지
+- `flex-shrink: 1;` : 필요에 따라 축소될 수 있음 (default value)
+- 숫자 커질수록 더 많이 축소됨
 
 <br/><br/>
 
 ### 1.8. Flex Basis
 
-- **`flex-basis`**
-  - `flex-grow`로 커지기 시작하는 지점이자, `flex-shrink`로 줄어들기 시작하는 지점
-  - 커지거나 줄어들기 전의 초기 **길이**
-    - 초기 너비가 아닌 **길이**인 이유는 Main Axis를 따라가기 때문에 `flex-direction`이 `column`인 경우 `height`가 되기 때문
-    - 즉, `width`와 다른 점은 Main Axis를 기준으로 한다는 점
-  - e.g. `flex-grow: 2;` `flex-shrink: 0;`와 함께 사용 시, `flex-basis`는 `min-width`와 같은 효과 낼 수 있음
-  - e.g. `flex-grow: 0;` `flex-shrink: 5;`와 함께 사용 시, `flex-basis`는 `max-width`와 같은 효과 낼 수 있음
+#### `flex-basis`
+
+- `flex-grow`로 커지기 시작하는 지점이자, `flex-shrink`로 줄어들기 시작하는 지점
+- 커지거나 줄어들기 전의 초기 **길이**
+  - 초기 너비가 아닌 **길이**인 이유는 Main Axis를 따라가기 때문에 `flex-direction`이 `column`인 경우 `height`가 되기 때문
+  - 즉, `width`와 다른 점은 Main Axis를 기준으로 한다는 점
+- e.g. `flex-grow: 2;` `flex-shrink: 0;`와 함께 사용 시, `flex-basis`는 `min-width`와 같은 효과 낼 수 있음
+- e.g. `flex-grow: 0;` `flex-shrink: 5;`와 함께 사용 시, `flex-basis`는 `max-width`와 같은 효과 낼 수 있음
 
 <br/>
 
-- **`flex: flex-grow flex-shrink flex-basis;`**
-  - `flex-grow`와 `flex-shrink`, `flex-basis`를 한 번에 작성 가능
+#### `flex: flex-grow flex-shrink flex-basis;`
+
+- `flex-grow`와 `flex-shrink`, `flex-basis`를 한 번에 작성 가능
 
 <br/><br/>
 
@@ -114,8 +126,9 @@
 
 ### 2.1. Columns and Rows
 
-- **`grid-template-columns`**
-- **`grid-template-rows`**
+#### `grid-template-columns`
+
+#### `grid-template-rows`
 
 <br/>
 
@@ -152,12 +165,17 @@
 
 ### 2.2. Grid Lines
 
-- **`grid-column-start`**
-- **`grid-column-end`**
-- **`grid-column`**
-- **`grid-row-start`**
-- **`grid-row-end`**
-- **`grid-row`**
+#### `grid-column-start`
+
+#### `grid-column-end`
+
+#### `grid-column`
+
+#### `grid-row-start`
+
+#### `grid-row-end`
+
+#### `grid-row`
 
 <br/>
 
@@ -220,11 +238,11 @@
 
 ### 2.4. Grid Template
 
-- `grid-template-areas`
-- `grid-template`
-- `grid-area`
+#### `grid-template-areas`
 
-<br/>
+#### `grid-template`
+
+#### `grid-area`
 
 - 각 영역(Grid Area)에 이름을 붙이고, 그 이름을 이용해 배치하는 방법
 
@@ -281,9 +299,7 @@
 
 ### 2.5. The Span Keyword
 
-- `span`
-
-<br/>
+#### `span`
 
 - **몇 개의 셀을 차지하게 할 건지** 지정
   ```css
@@ -294,3 +310,40 @@
     grid-row: 1 / span 3;
   }
   ```
+
+<br/><br/>
+
+### 2.6. Auto Columns and Rows
+
+#### `grid-auto-rows`
+
+#### `grid-auto-columns`
+
+- 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성
+- row나 column의 개수를 미리 알 수 없는 경우 사용
+- `grid-template-rows`로 미리 세팅해 둔 것이 없을 때, 모든 row는 `grid-tempalte-rows`의 통제를 벗어난 row가 됨
+  - 이를 `grid-auto-rows`가 처리
+
+```css
+.father {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* 3번째 row부터 1fr */
+  grid-auto-rows: 1fr;
+  /* 3번째 column부터 0.5fr */
+  grid-auto-columns: 0.5fr;
+}
+```
+
+<br/>
+
+#### `grid-auto-flow`
+
+- 아이템이 자동 배치되는 흐름을 결정하는 속성
+- row 또는 column을 따라 배치하거나 빈 공간을 최소화하여 배치 가능
+- `grid-auto-flow: row;`: default value
+- `column`: 그리드 아이템이 열을 따라 배치
+- `dense`: 빈 공간을 최소화하여 가능한 모든 아이템을 배치
+- `row dense`: 행 방향으로 빈 공간을 최소화하여 배치
+- `column dense`: 열 방향으로 빈 공간을 최소화하여 배치

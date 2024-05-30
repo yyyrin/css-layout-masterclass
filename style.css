@@ -1,15 +1,19 @@
 body {
+  padding: 0;
+  margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .father {
   display: grid;
-  grid-template-columns: [cucumber] 100px [potato] 200px [banana] 50px [brocoli];
-  grid-template-rows: [korea] 200px [thailand] 100px [greece];
-  /* gap: 10px; */
-  row-gap: 10px;
-  column-gap: 20px;
+  min-height: 50vh;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 0.5fr;
+  grid-auto-flow: column;
 }
 
 .child {
@@ -19,26 +23,4 @@ body {
   font-size: 28px;
   align-items: center;
   justify-content: center;
-}
-
-.child:first-child {
-  /*
-  grid-row-start: 1;
-  grid-row-end: -1;
-  grid-row: 1 / -1; 
-  grid-row: korea / greece;
-  */
-  background-color: khaki;
-  /* grid-row: span 2; */
-}
-
-.child:last-child {
-  background-color: turquoise;
-  grid-column: potato / span 2;
-  /* 
-  grid-column-start: 2;
-  grid-column-end: -1; 
-  grid-column: 2 / -1; 
-  grid-column: potato / brocoli;
-  */
 }
