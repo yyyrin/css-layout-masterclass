@@ -561,3 +561,43 @@
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   }
   ```
+
+<br/><br/>
+
+## 3. SCSS
+
+### 3.1. Introduction
+
+- Sass(SCSS): 코드의 재활용성을 올리고, 가독성을 올리는 등 CSS에서 보이던 단점을 보완하고, 개발의 효율을 올리기 위해 등장한 **CSS 전처리기 언어**
+- 웹은 CSS밖에 모르기 때문에, 우선 전처리기 언어 문법으로 코딩하고, CSS로 **컴파일**해서 웹에서 동작시킴
+
+<br/>
+
+- Vite 환경에서 SCSS 설치
+
+  ```bash
+  npm add -D sass
+  ```
+
+<br/>
+
+- 변수 설정 및 사용
+
+  ```scss
+  <!-- SCSS에서 변수 사용 방식 -->
+  $bgColor: red;
+
+  body {
+    background-color: $bgColor;
+  }
+  ```
+
+  ```css
+  <!-- 기존 CSS에서 변수 사용 방식 -- > :root {
+    --bgColor: red;
+  }
+
+  body {
+    background-color: var(--bgColor);
+  }
+  ```
