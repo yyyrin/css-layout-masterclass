@@ -608,34 +608,59 @@
 
 - 선택자의 중첩(Nesting)을 통해 반복되는 부모요소 선택자 사용을 줄일 수 있음
 
-```css
-ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-}
+  ```css
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
 
-ul li {
-  background-color: tomato;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 7px;
-}
-```
-
-```scss
-ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-
-  li {
+  ul li {
     background-color: tomato;
     color: white;
     padding: 5px 10px;
     border-radius: 7px;
   }
-}
-```
+  ```
+
+  ```scss
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+
+    li {
+      background-color: tomato;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 7px;
+    }
+  }
+  ```
+
+<br/><br/>
+
+### 3.3. @extend
+
+- 상속되는 선택자를 계층적으로 명시하여 불필요한 반복적 사용을 줄일 수 있음
+
+  ```scss
+  %alert {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px dashed black;
+  }
+
+  .success {
+    @extend %alert;
+    background-color: green;
+  }
+
+  .error {
+    @extend %alert;
+    background-color: tomato;
+  }
+  ```
