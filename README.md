@@ -664,3 +664,34 @@
     background-color: tomato;
   }
   ```
+
+<br/><br/>
+
+### 3.4. Mixins
+
+- 프로그래밍 언어에서 사용하는 조건문, 반복문을 통해서 동적으로 CSS 관리 가능
+- JavaScript의 function과 같은 코드 덩어리를 만들고, function(`@mixin`으로 만들어진 코드 덩어리)이 argument(인자)를 받을 수 있게 함
+- `@include`를 사용하여 argument(인자)를 보내고, function을 불러옴
+- 인자는 여러 개 가능
+
+  ```SCSS
+  @mixin alert($bgColor, $borderColor) {
+    background-color: $bgColor;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px dashed $borderColor;
+  }
+
+  .success {
+    @include alert(green, blue);
+  }
+
+  .error {
+    @include alert(tomato, white);
+  }
+
+  .warning {
+    @include alert(yellow, black);
+  }
+  ```
