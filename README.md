@@ -695,3 +695,58 @@
     @include alert(yellow, black);
   }
   ```
+
+<br/><br/>
+
+### 3.5. Responsive Mixins
+
+- SCSS에서 반응형 사이즈 사용법
+
+```SCSS
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+@mixin smallDevice {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mediumDevice {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin largeDevice {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xlDevice {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+body {
+  @include smallDevice {
+    background-color: blue;
+  }
+
+  @include mediumDevice {
+    background-color: red;
+  }
+
+  @include largeDevice {
+    background-color: purple;
+  }
+
+  @include xlDevice {
+    background-color: pink;
+  }
+}
+```
