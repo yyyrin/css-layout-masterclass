@@ -9,8 +9,7 @@ body {
   display: grid;
   gap: 10px;
   height: 100vh;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  /* min-content max-content */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .child {

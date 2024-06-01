@@ -541,3 +541,23 @@
     grid-template-rows: repeat(3, minmax(100px, auto));
   }
   ```
+
+<br/><br/>
+
+### 2.10. Auto Fill and Auto Fit
+
+#### `auto-fill`
+
+#### `auto-fit`
+
+- column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채움
+- `auto-fill`: 최대한 많은 아이템을 배치하고, 남은 공간은 비어있게 함
+- `auto-fit`: 필요한 만큼의 아이템을 배치하고, 남은 공간은 아이템을 늘려 채움
+
+  ```css
+  .father {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  }
+  ```
