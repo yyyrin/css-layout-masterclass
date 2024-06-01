@@ -601,3 +601,41 @@
     background-color: var(--bgColor);
   }
   ```
+
+<br/><br/>
+
+### 3.2. Nesting
+
+- 선택자의 중첩(Nesting)을 통해 반복되는 부모요소 선택자 사용을 줄일 수 있음
+
+```css
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+ul li {
+  background-color: tomato;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+```
+
+```scss
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+
+  li {
+    background-color: tomato;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+}
+```
