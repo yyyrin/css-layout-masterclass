@@ -8,62 +8,78 @@
   </head>
   <body>
     <div class="phone">
-      <!-- header.header>ul.header__list>li.header__list-item*4 -->
+      <!-- header.header>span.header__btn+h1.header__title+span.header__btn -->
       <header class="header">
-        <ul class="header__list">
-          <li class="header__list-item header__list-item--inverted">All</li>
-          <li class="header__list-item">Advertising</li>
-          <li class="header__list-item">Dev & Data Science</li>
-          <li class="header__list-item">Goals</li>
-          <li class="header__list-item">iOS Development</li>
-        </ul>
+        <span class="header__btn">👈</span>
+        <h1 class="header__title">My Cart</h1>
+        <span class="header__btn">🛒</span>
       </header>
 
-      <!-- .cards>.cards__card*6>h2.card__title+.card__footer>span.price+span+length -->
-      <div class="cards">
-        <div class="cards__card">
-          <h2 class="card__title">The Making of Modern ...</h2>
-          <div class="card__footer">
-            <span class="price">63%</span>
-            <span class="length">63%</span>
+      <secton class="total">
+        <span class="total__price">$3550</span>
+        <span class="total__subtitle">based on your 5 items</span>
+      </secton>
+
+      <section class="items">
+        <article class="item">
+          <!-- .item__top-row+.item__bottom-row -->
+          <div class="item__info">
+            <div class="item__info-col">
+              <h2 class="item__title">POP TEMPLE PRINT T-SHIRT</h2>
+              <h3 class="item__subtitle">versace limited 2021</h3>
+            </div>
+            <div class="item__info-col">
+              <span class="item__total-price">$1990</span>
+              <div class="item__piece-price">$995 per piece</div>
+            </div>
           </div>
-        </div>
-        <div class="cards__card">
-          <h2 class="card__title">Mobile Interfaces Advanced</h2>
-          <div class="card__footer">
-            <span class="price">Free</span>
-            <span class="length">2</span>
+
+          <div class="item__specs">
+            <div class="spec">
+              <span class="spec__title">Size</span>
+              <div class="spec__value">48 - L</div>
+            </div>
+            <div class="spec">
+              <span class="spec__title">QT</span>
+              <div class="spec__value">2 pcs</div>
+            </div>
           </div>
-        </div>
-        <div class="cards__card">
-          <h2 class="card__title">Graphic Design. Professium</h2>
-          <div class="card__footer">
-            <span class="price">$199/month</span>
-            <span class="length">9 months</span>
+          <img
+            src="https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="random image"
+            class="item__photo"
+          />
+        </article>
+
+        <article class="item">
+          <div class="item__info">
+            <div class="item__info-col">
+              <h2 class="item__title">CHAIN REACTIO N TRAINE RS</h2>
+              <h3 class="item__subtitle">versace limited 2021</h3>
+            </div>
+            <div class="item__info-col">
+              <span class="item__total-price">$850</span>
+              <div class="item__piece-price">$850 per piece</div>
+            </div>
           </div>
-        </div>
-        <div class="cards__card">
-          <h2 class="card__title">Web Design Junior</h2>
-          <div class="card__footer">
-            <span class="price">Free</span>
-            <span class="length">3</span>
+
+          <div class="item__specs">
+            <div class="spec">
+              <span class="spec__title">Size</span>
+              <div class="spec__value">45</div>
+            </div>
+            <div class="spec">
+              <span class="spec__title">QT</span>
+              <div class="spec__value">1 pcs</div>
+            </div>
           </div>
-        </div>
-        <div class="cards__card">
-          <h2 class="card__title">Inclusive Web Design</h2>
-          <div class="card__footer">
-            <span class="price">$99/mon</span>
-            <span class="length">3</span>
-          </div>
-        </div>
-        <div class="cards__card">
-          <h2 class="card__title">Machine Learning</h2>
-          <div class="card__footer">
-            <span class="price">Free</span>
-            <span class="length">6</span>
-          </div>
-        </div>
-      </div>
+          <img
+            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=998&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="random image"
+            class="item__photo"
+          />
+        </article>
+      </section>
     </div>
   </body>
 </html>
