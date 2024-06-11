@@ -1,0 +1,124 @@
+@import "./reset.scss";
+
+body {
+  background: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.header {
+  overflow-x: scroll;
+  scrollbar-width: none; // Firefox
+
+  // Chrome, Safari
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header__list {
+    display: flex;
+    color: white;
+    gap: 10px;
+    width: max-content; // 요소의 자식 요소들이 차지하는 최대 너비만큼 요소의 너비 설정
+
+    .header__list-item {
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      padding: 10px;
+      border-radius: 20px;
+    }
+
+    .header__list-item--inverted {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  margin: 20px 0px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+
+  .cards__card {
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+    gap: 20px;
+
+    .card__title {
+      font-size: 26px;
+    }
+
+    .card__footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .price {
+        background-color: #ffdd2c;
+      }
+      .length {
+        background-color: white;
+      }
+    }
+
+    &:first-child {
+      background-color: #292d33;
+      border: 1px solid white;
+      .card__title {
+        color: white;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #f5f3f0;
+    }
+
+    &:nth-child(3) {
+      background-color: #f8fdb9;
+    }
+
+    &:nth-child(4) {
+      background-color: #b19ef6;
+    }
+
+    &:nth-child(5) {
+      background-color: #fed0d0;
+    }
+
+    &:last-child {
+      background-color: #dce6d1;
+    }
+
+    // 3의 배수 번째 child
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+  }
+}
