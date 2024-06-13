@@ -1,5 +1,210 @@
 @import "./reset.scss";
 
+$bg: #e4e5e9;
+$grey: #cbcfd2;
+$darkGrey: #7f848a;
+$black: #393e44;
+$yellow: #edc212;
+$red: #e21a00;
+$blue: #392aa9;
+
 body {
   height: 100vh;
+  background-color: $black;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  color: $black;
+  gap: 2px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px;
+  .info__hd,
+  .info__space,
+  .info__settings {
+    background-color: $bg;
+  }
+  .info__hd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    .hd__hamburger {
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      gap: 4px;
+      div:first-child {
+        border: 1.5px solid $grey;
+        height: 8px;
+        border-radius: 4px 4px 0px 0px;
+      }
+      div:nth-child(2) {
+        height: 14px;
+        background-color: $black;
+        border-radius: 2px;
+      }
+      div:nth-child(3) {
+        height: 20px;
+        background-color: $red;
+        border-radius: 2px;
+      }
+      div:nth-child(4) {
+        height: 14px;
+        background-color: $grey;
+        border-radius: 2px;
+      }
+      div:nth-child(5) {
+        height: 8px;
+        border: 1.5px solid $grey;
+        border-radius: 0px 0px 4px 4px;
+      }
+    }
+    .hd__dics {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div:first-child {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+      div:last-child {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: $bg;
+        position: absolute;
+      }
+    }
+
+    .hd__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      font-size: 14px;
+      .hd__full {
+        display: flex;
+        align-items: center;
+        gap: 2.5px;
+        span {
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          background-color: $black;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .hd__dics div:first-child {
+        background-color: #393e44;
+      }
+      .hd__footer .hd__full {
+        span:last-child {
+          background-color: $grey;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .hd__dics div:first-child {
+        background-color: $red;
+      }
+      .hd__footer .hd__full {
+        span:nth-child(3),
+        span:nth-child(4) {
+          background-color: $grey;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .hd__dics div:first-child {
+        background-color: $grey;
+      }
+      .hd__footer .hd__full {
+        span:nth-child(2),
+        span:nth-child(3),
+        span:nth-child(4) {
+          background-color: $grey;
+        }
+      }
+    }
+  }
+
+  .info__space {
+    grid-row: 1 / span 2;
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    .info__space-item {
+      h3 {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      h2 {
+        font-size: 100px;
+      }
+    }
+  }
+
+  .info__settings {
+    grid-row: 3 / span 2;
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 300;
+    .info__settings-item {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1.5fr 2.5fr 3.5fr;
+  .stats__stat {
+    padding: 20px;
+    &:first-child {
+      background-color: $bg;
+    }
+    &:nth-child(2) {
+      background-color: $yellow;
+    }
+    &:nth-child(3) {
+      background-color: $darkGrey;
+    }
+    &:nth-child(4) {
+      background-color: $red;
+      color: white;
+    }
+    &:last-child {
+      background-color: $blue;
+      color: white;
+    }
+    .stat__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
 }
