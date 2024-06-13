@@ -838,7 +838,7 @@ body {
 
 <br/>
 
-#### 4.5. `border` 대체하는 방법
+### 4.5. `border` 대체하는 방법
 
 - 부모 요소의 `background-color`를 `border`의 color로 설정
 - 자식 요소의 `background-color`를 원하는 색으로 설정

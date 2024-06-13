@@ -7,64 +7,46 @@
     <title>CSS Layout Masterclass</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav">
-        <ul>
-          <li class="header__tab">🔥</li>
-          <li class="header__tab">Best Sellers</li>
-          <li class="header__tab">Hand Sanitizer</li>
-          <li class="header__tab">Hand Cream</li>
-          <li class="header__tab">Refills</li>
-          <li class="header__tab">Grid</li>
-          <li class="header__tab">Toothpaste</li>
-          <li class="header__tab">Hand Soap</li>
-          <li class="header__tab">Combos</li>
-          <li class="header__tab">😁</li>
-          <li class="header__tab">👜</li>
-        </ul>
-      </nav>
-      <div class="header__breadcrumbs">
-        <span class="header__crumb">Home /</span>
-        <span class="header__crumb">Catalog /</span>
-        <span class="header__crumb">Hand Soap /</span>
-        <span class="header__crumb">Sunset Flour</span>
-      </div>
-    </header>
-
-    <section class="product">
-      <div class="product__img"></div>
-      <div class="product__info">
-        <div class="product__header">
-          <span class="product__category">Hand Soap</span>
-          <h1 class="product__title">SUNSET FLEUR</h1>
-          <div class="product__add-to-cart">
-            <div class="product__qty">
-              <span class="product__minus">-</span>
-              <span class="product__total-qty">1</span>
-              <span class="product__plus">+</span>
-            </div>
-            <span class="product__price">$11,90</span>
+    <div class="wrapper">
+      <div class="grid">
+        <header class="header">
+          <div class="header__top">
+            <span class="header__reviews">4.98</span>
+            <span class="header__label">Best reviews</span>
           </div>
+          <h1 class="header__title">Duh!</h1>
+          <h3 class="header__subtitle">
+            3d illustrations for digital 😊 designers and agencies! 🎨 For you!
+          </h3>
+        </header>
+        <div class="grid__img"></div>
+        <nav class="nav">
+          <ul>
+            <li class="nav__item">ABOUT</li>
+            <li class="nav__item">SOLUTIONS</li>
+            <li class="nav__item">PORTFOLIO</li>
+            <li class="nav__item">BLOG</li>
+          </ul>
+          <span class="nav__cta">Hire Us</span>
+        </nav>
+        <div class="grid__cell">
+          <span>Recent Collaborations</span>
         </div>
-
-        <div class="product__footer">
-          <div class="product__description">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Consectetur reprehenderit optio officia nam sapiente, sit porro
-              numquam consequatur aut doloremque unde, perferendis quas ad.
-              Voluptas qui beatae tempore esse assumenda.
-            </p>
-          </div>
-          <div class="product__faq">
-            <div class="product__question">HOW TO USE<span>+</span></div>
-            <div class="product__question">INGREDIENTS<span>+</span></div>
-            <div class="product__question">
-              SHIPPING & PAYMENT<span>+</span>
-            </div>
-          </div>
+        <div class="grid__cell">
+          <span>CBP 2</span>
+        </div>
+        <div class="grid__img"></div>
+        <div class="grid__img"></div>
+        <div class="grid__img"></div>
+        <div class="blog-post">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            quasi quam aperiam, suscipit laboriosam aliquam error quas quaerat
+            nemo nihil debitis repellat repudiandae sunt illo dicta accusamus
+            architecto iusto magnam.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
